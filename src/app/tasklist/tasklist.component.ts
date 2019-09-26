@@ -12,6 +12,13 @@ interface Task {
 })
 export class TasklistComponent implements OnInit {
 
+  tasks: Task[] = [
+    {done: false, task:'Iron boots'},
+    {done: false, task:'Aprender serenade of water'},
+    {done: false, task:'Conseguir hookshot'},
+    {done: false, task:'Túnica zora'},
+  ];
+
   constructor() { }
 
   ngOnInit() {
