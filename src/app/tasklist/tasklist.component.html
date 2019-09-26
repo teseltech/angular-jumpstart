@@ -3,4 +3,8 @@
     <input type="checkbox" [(ngModel)]="task.done">
     <input [(ngModel)]="task.task">
   </li>
+  <li>
+    <input type="checkbox" disabled>
+    <input (keyup.enter)="submit()" [(ngModel)]="newtask.task" placeholder="Nuevo task">
+  </li>
 </ul>

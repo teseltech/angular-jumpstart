@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 interface Task {
   done: boolean;
@@ -19,9 +20,15 @@ export class TasklistComponent implements OnInit {
     {done: false, task:'Túnica zora'},
   ];
 
+  newtask: Task = {done: false, task:''};
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  submit() {
+    this.tasks.push({...this.newtask});
+    this.newtask = {done: false, task:''};
+  }
 }
