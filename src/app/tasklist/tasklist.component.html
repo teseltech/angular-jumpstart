@@ -1,7 +1,7 @@
 <ul>
-  <li *ngFor="let task of tasks">
-    <input type="checkbox" [(ngModel)]="task.done">
-    <input [(ngModel)]="task.task">
+  <li *ngFor="let task of tasks | async">
+    <input type="checkbox" (change)="update(task)" [(ngModel)]="task.done">
+    <input (change)="update(task)" [(ngModel)]="task.task">
   </li>
   <li>
     <input type="checkbox" disabled>
